@@ -51,7 +51,7 @@ function PostPage() {
           ← All posts
         </Link>
         <div className="mt-8 flex flex-wrap gap-2">
-          {post.tags.map((t) => (
+          {post.tags.map((t: string) => (
             <span key={t} className="chip">{t}</span>
           ))}
         </div>
