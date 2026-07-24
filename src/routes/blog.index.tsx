@@ -9,12 +9,12 @@ export const Route = createFileRoute("/blog/")({
       {
         name: "description",
         content:
-          "Field notes on Oracle databases and Oracle APEX — troubleshooting, performance, and real-world war stories from independent consultant Valja Vassileva.",
+          "Field notes on Oracle databases and Oracle APEX — troubleshooting, performance and real-world war stories from independent consultant Valja Vassileva.",
       },
       { property: "og:title", content: "Blog — Oracle & APEX field notes" },
       {
         property: "og:description",
-        content: "Troubleshooting, tuning, and APEX field notes from a working Oracle consultant.",
+        content: "Troubleshooting, tuning and APEX field notes from a working Oracle consultant.",
       },
     ],
   }),

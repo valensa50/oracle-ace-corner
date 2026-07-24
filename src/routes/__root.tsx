@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Independent Oracle DBA and APEX developer. Consulting, troubleshooting, and a blog on real-world Oracle problems.",
+          "Independent Oracle DBA and APEX developer. Consulting, troubleshooting and a blog on real-world Oracle problems.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
