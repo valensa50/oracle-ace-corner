@@ -14,7 +14,7 @@ export const Route = createFileRoute("/about")({
       {
         property: "og:description",
         content:
-          "Independent Oracle consultant. 15+ years of DBA and APEX work across finance, telco, and public sector.",
+          "Independent Oracle consultant. 15+ years of DBA and APEX work across finance, telco  and public sector.",
       },
     ],
   }),

@@ -10,13 +10,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Independent Oracle consultant. Oracle DBA, APEX application development, performance tuning, and honest advice for teams running Oracle databases.",
+          "Independent Oracle consultant. Oracle DBA, APEX application development, performance tuning  and honest advice for teams running Oracle databases.",
       },
       { property: "og:title", content: "Valja Vassileva — Oracle DBA & APEX Developer" },
       {
         property: "og:description",
         content:
-          "Independent Oracle DBA and APEX developer. Consulting, troubleshooting, and blog posts on real-world Oracle problems.",
+          "Independent Oracle DBA and APEX developer. Consulting, troubleshooting  and blog posts on real-world Oracle problems.",
       },
     ],
   }),
@@ -149,7 +149,7 @@ const services = [
     tag: "01 · APEX",
     title: "Oracle APEX development",
     blurb:
-      "End-to-end APEX applications — from data model to UX. Custom auth, integrations, and upgrades of legacy apps.",
+      "End-to-end APEX applications — from data model to UX. Custom auth, integrations  and upgrades of legacy apps.",
   },
   {
     tag: "02 · DBA",
