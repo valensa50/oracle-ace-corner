@@ -27,18 +27,18 @@ function Contact() {
         <span className="chip">Contact</span>
         <h1 className="mt-6 text-5xl md:text-6xl">Let's talk.</h1>
         <p className="mt-6 text-lg text-ink-muted">
-          Whether it's a slow query, a stalled APEX project, or a database
+          Whether it's a slow query, a stalled APEX project or a database
           upgrade you've been dreading — describe what's going on and I'll get
           back to you within one business day.
         </p>
 
         <div className="mt-12 grid sm:grid-cols-2 gap-6">
           <a
-            href="mailto:hello@valjavassileva.com?subject=Oracle%20consulting%20enquiry"
+            href="mailto:valja.vassileva@gmail.com?subject=Oracle%20consulting%20enquiry"
             className="rounded-2xl border border-border p-6 bg-card hover:border-accent/60 transition-colors block"
           >
             <div className="font-mono text-xs text-accent tracking-widest">Email</div>
-            <div className="mt-2 text-lg">hello@valjavassileva.com</div>
+            <div className="mt-2 text-lg">valja.vassileva@gmail.com</div>
             <div className="mt-1 text-sm text-ink-muted">Best for project enquiries.</div>
           </a>
           <div className="rounded-2xl border border-border p-6 bg-card">
@@ -52,7 +52,7 @@ function Contact() {
 
         <form
           className="mt-12 space-y-5"
-          action="mailto:hello@valjavassileva.com"
+          action="mailto:valja.vassileva@gmail.com"
           method="post"
           encType="text/plain"
         >
