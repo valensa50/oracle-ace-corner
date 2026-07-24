@@ -47,7 +47,7 @@
   --foreground: oklch(0.18 0.03 155);
   --surface: oklch(0.965 0.012 140);
   --ink: oklch(0.18 0.03 155);
-  --ink-muted: oklch(0.45 0.02 155);
+  --ink-muted: oklch(0.38 0.02 155);
 
   --card: oklch(1 0 0);
   --card-foreground: var(--ink);

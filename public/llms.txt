@@ -1,0 +1,17 @@
+# Valja Vassileva — Oracle DBA & APEX Developer
+
+> Independent Oracle consultant based in the EU. Oracle DBA, APEX application development, performance tuning and honest advice for teams running Oracle databases.
+
+## Pages
+
+- [Home](/): Overview of services and latest writing.
+- [About](/about): Background, experience and how I work.
+- [Services](/services): Oracle APEX development, DBA, advisory and migrations.
+- [Blog](/blog): Posts on real-world Oracle and APEX problems.
+- [Contact](/contact): Get in touch about a project or issue.
+
+## Blog
+
+- [ORA-01555: Snapshot too old — a practical checklist](/blog/ora-01555-snapshot-too-old): Troubleshooting the classic snapshot-too-old error.
+- [APEX authentication schemes I actually use in production](/blog/apex-authentication-schemes): SSO, custom or built-in APEX accounts.
+- [APEX performance: the hidden costs](/blog/apex-performance-hidden-costs): What actually slows APEX apps down.
