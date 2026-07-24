@@ -52,9 +52,26 @@ function Contact() {
 
         <form
           className="mt-12 space-y-5"
-          action="mailto:valja.vassileva@gmail.com"
-          method="post"
-          encType="text/plain"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const f = e.currentTarget as HTMLFormElement;
+            const data = new FormData(f);
+            const name = String(data.get("name") || "");
+            const email = String(data.get("email") || "");
+            const company = String(data.get("company") || "");
+            const message = String(data.get("message") || "");
+            const subject = `Oracle consulting enquiry${name ? ` — ${name}` : ""}`;
+            const body = [
+              `Name: ${name}`,
+              `Email: ${email}`,
+              `Company: ${company}`,
+              "",
+              message,
+            ].join("\n");
+            window.location.href = `mailto:valja.vassileva@gmail.com?subject=${encodeURIComponent(
+              subject
+            )}&body=${encodeURIComponent(body)}`;
+          }}
         >
           <Field label="Your name" name="name" placeholder="Jane Doe" />
           <Field label="Email" name="email" type="email" placeholder="jane@company.com" />
