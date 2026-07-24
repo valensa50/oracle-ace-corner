@@ -21,7 +21,7 @@ export const posts: Post[] = [
 When a long-running query fails with ORA-01555, the reflex is to raise UNDO_RETENTION. That is almost never the right first move.
 
 ## What actually happened
-Oracle needed a consistent read for a block whose undo had already been overwritten. Three things drive that: undo pressure, commit rate  and query duration.
+Oracle needed a consistent read for a block whose undo had already been overwritten. Three things drive that: undo pressure, commit rate and query duration.
 
 ## The checklist
 1. Confirm the query duration in v$sql_monitor — is it a runaway plan?
@@ -39,12 +39,12 @@ The cheapest fix is almost always making the query faster. A 40-minute report ha
     readingTime: "9 min",
     tags: ["APEX", "Security"],
     excerpt:
-      "SSO, custom  or the built-in APEX accounts? After a decade of Oracle APEX projects, here is what I reach for by default — and when I break the rule.",
+      "SSO, custom or the built-in APEX accounts? After a decade of Oracle APEX projects, here is what I reach for by default — and when I break the rule.",
     content: `\
 Every APEX project starts with the same question: how do people log in?
 
 ## Default: SAML / OIDC via the customer's IdP
-If the client has Entra ID, Okta  or Keycloak, use it. Zero password management for you  and offboarding is automatic.
+If the client has Entra ID, Okta or Keycloak, use it. Zero password management for you and offboarding is automatic.
 
 ## Second choice: Database Accounts
 For internal tooling where users already have DB credentials, Database Accounts save an entire user-management layer.
@@ -69,7 +69,7 @@ Interactive Reports feel free. They are not.
 - Saved reports pin queries you may want to evolve.
 
 ## What I do
-For anything over ~50k rows: switch to a Classic Report backed by a well-indexed view  and expose only the filters that hit indexes.`,
+For anything over ~50k rows: switch to a Classic Report backed by a well-indexed view and expose only the filters that hit indexes.`,
   },
 ];
 

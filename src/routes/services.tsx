@@ -14,7 +14,7 @@ export const Route = createFileRoute("/services")({
       {
         property: "og:description",
         content:
-          "APEX application development, Oracle DBA retainer, tuning  and migrations. See how I can help.",
+          "APEX application development, Oracle DBA retainer, tuning and migrations. See how I can help.",
       },
     ],
   }),
@@ -25,7 +25,7 @@ const services = [
   {
     tag: "01",
     title: "Oracle APEX development",
-    lede: "New APEX applications, redesigns of legacy ones  and integrations with the rest of your stack.",
+    lede: "New APEX applications, redesigns of legacy ones and integrations with the rest of your stack.",
     bullets: [
       "New APEX apps from data model to launch",
       "Rescue of legacy APEX 4/5 apps",
@@ -60,7 +60,7 @@ const services = [
   {
     tag: "04",
     title: "Migrations",
-    lede: "From on-prem to OCI, from legacy versions to 23ai  or consolidating a fleet of instances.",
+    lede: "From on-prem to OCI, from legacy versions to 23ai or consolidating a fleet of instances.",
     bullets: [
       "19c / 23ai upgrades",
       "On-prem → OCI moves",

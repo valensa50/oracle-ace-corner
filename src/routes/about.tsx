@@ -14,7 +14,7 @@ export const Route = createFileRoute("/about")({
       {
         property: "og:description",
         content:
-          "Independent Oracle consultant. 15+ years of DBA and APEX work across finance, telco  and public sector.",
+          "Independent Oracle consultant. 15+ years of DBA and APEX work across finance, telco and public sector.",
       },
     ],
   }),
@@ -33,7 +33,7 @@ function About() {
           <p>
             I'm Valja — an independent Oracle DBA and APEX developer. I started
             out on Oracle 9i in a bank, spent a decade in enterprise consulting,
-            and now work directly with teams that need deep Oracle expertise
+           and now work directly with teams that need deep Oracle expertise
             without hiring for it full-time.
           </p>
           <p>
