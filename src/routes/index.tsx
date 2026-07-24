@@ -40,12 +40,11 @@ function Home() {
         <div className="container-page relative pt-20 pb-24 md:pt-32 md:pb-36">
           <span className="chip">Available for new engagements — 2026</span>
           <h1 className="mt-6 text-5xl md:text-7xl leading-[1.02] max-w-4xl">
-            Oracle databases that stay <em className="text-accent not-italic">quiet</em>,
-            and APEX apps people actually use.
+            Behind Every Great App Is a <em className="text-accent not-italic">Quiet</em> Database
           </h1>
           <p className="mt-6 text-lg md:text-xl text-ink-muted max-w-2xl">
             I'm Valja Vassileva — an independent Oracle DBA and APEX developer.
-            I help teams tune slow databases, ship internal applications, and
+            I help teams tune slow databases, ship internal applications and
             sleep through the night.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -129,7 +128,7 @@ function Home() {
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/40 blur-3xl" aria-hidden />
           <div className="relative">
             <h2 className="text-4xl md:text-5xl max-w-2xl">
-              Have a slow query, a stuck APEX app, or a migration on the horizon?
+              Have a slow query, a stuck APEX app or a migration on the horizon?
             </h2>
             <p className="mt-4 max-w-xl opacity-80">
               I take on a limited number of engagements each quarter — from
