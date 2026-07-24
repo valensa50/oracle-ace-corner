@@ -58,7 +58,7 @@ function Footer() {
           <div className="font-serif text-xl mb-2">Valja Vassileva</div>
           <p className="text-ink-muted max-w-xs">
             Oracle DBA & APEX developer. Independent consultant helping teams keep
-            their Oracle databases fast, safe, and boring.
+            their Oracle databases fast, safe and boring.
           </p>
         </div>
         <div>
@@ -76,10 +76,10 @@ function Footer() {
         <div>
           <div className="chip mb-3">Contact</div>
           <a
-            href="mailto:hello@valjavassileva.com"
+            href="mailto:valja.vassileva@gmail.com"
             className="link-underline text-foreground"
           >
-            hello@valjavassileva.com
+            valja.vassileva@gmail.com
           </a>
           <p className="text-ink-muted mt-3 text-xs">
             © {new Date().getFullYear()} Valja Vassileva. All rights reserved.
