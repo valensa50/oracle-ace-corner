@@ -130,7 +130,7 @@ function Home() {
             <h2 className="text-4xl md:text-5xl max-w-2xl">
               Have a slow query, a stuck APEX app or a migration on the horizon?
             </h2>
-            <p className="mt-4 max-w-xl opacity-80">
+            <p className="mt-4 max-w-xl text-primary-foreground/90">
               I take on a limited number of engagements each quarter — from
               one-off audits to long-term retainers.
             </p>
