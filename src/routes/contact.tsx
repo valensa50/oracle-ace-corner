@@ -25,6 +25,37 @@ export const Route = createFileRoute("/contact")({
 });
 
 function Contact() {
+  const send = useServerFn(submitContactMessage);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [error, setError] = useState<string>("");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    setStatus("sending");
+    setError("");
+    try {
+      await send({
+        data: {
+          name: String(fd.get("name") || ""),
+          email: String(fd.get("email") || ""),
+          company: String(fd.get("company") || ""),
+          message: String(fd.get("message") || ""),
+        },
+      });
+      form.reset();
+      setStatus("sent");
+    } catch (err) {
+      setStatus("error");
+      setError(
+        err instanceof Error && err.message
+          ? err.message
+          : "Something went wrong. Please try again."
+      );
+    }
+  }
+
   return (
     <SiteLayout>
       <section className="container-page py-20 md:py-28 max-w-3xl">
@@ -54,31 +85,9 @@ function Contact() {
           </div>
         </div>
 
-        <form
-          className="mt-12 space-y-5"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const f = e.currentTarget as HTMLFormElement;
-            const data = new FormData(f);
-            const name = String(data.get("name") || "");
-            const email = String(data.get("email") || "");
-            const company = String(data.get("company") || "");
-            const message = String(data.get("message") || "");
-            const subject = `Oracle consulting enquiry${name ? ` — ${name}` : ""}`;
-            const body = [
-              `Name: ${name}`,
-              `Email: ${email}`,
-              `Company: ${company}`,
-              "",
-              message,
-            ].join("\n");
-            window.location.href = `mailto:valja.vassileva@gmail.com?subject=${encodeURIComponent(
-              subject
-            )}&body=${encodeURIComponent(body)}`;
-          }}
-        >
-          <Field label="Your name" name="name" placeholder="Jane Doe" />
-          <Field label="Email" name="email" type="email" placeholder="jane@company.com" />
+        <form className="mt-12 space-y-5" onSubmit={onSubmit}>
+          <Field label="Your name" name="name" placeholder="Jane Doe" required />
+          <Field label="Email" name="email" type="email" placeholder="jane@company.com" required />
           <Field label="Company (optional)" name="company" placeholder="Acme Corp" />
           <div>
             <label htmlFor="message" className="block text-xs uppercase tracking-widest font-mono text-ink-muted mb-2">
@@ -89,12 +98,29 @@ function Contact() {
               name="message"
               rows={6}
               required
+              minLength={10}
               placeholder="A slow report, a new APEX app, a 19c upgrade..."
               className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
             />
           </div>
-          <button type="submit" className="btn-primary">Send message →</button>
+          <button type="submit" className="btn-primary" disabled={status === "sending"}>
+            {status === "sending" ? "Sending…" : "Send message →"}
+          </button>
+          {status === "sent" && (
+            <p role="status" className="text-sm text-accent">
+              Thanks — your message has been received. I'll reply within one business day.
+            </p>
+          )}
+          {status === "error" && (
+            <p role="alert" className="text-sm text-destructive">
+              {error}
+            </p>
+          )}
         </form>
+      </section>
+    </SiteLayout>
+  );
+
       </section>
     </SiteLayout>
   );
