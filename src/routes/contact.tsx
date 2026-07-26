@@ -120,10 +120,6 @@ function Contact() {
       </section>
     </SiteLayout>
   );
-
-      </section>
-    </SiteLayout>
-  );
 }
 
 function Field({
