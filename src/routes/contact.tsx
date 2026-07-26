@@ -127,11 +127,13 @@ function Field({
   name,
   type = "text",
   placeholder,
+  required,
 }: {
   label: string;
   name: string;
   type?: string;
   placeholder?: string;
+  required?: boolean;
 }) {
   return (
     <div>
@@ -142,7 +144,9 @@ function Field({
         id={name}
         name={name}
         type={type}
+        required={required}
         placeholder={placeholder}
+
         className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
       />
     </div>
