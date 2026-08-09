@@ -2,122 +2,20 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 
 export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Services — Oracle DBA & APEX Consulting" },
-      {
-        name: "description",
-        content:
-          "Oracle APEX development, Oracle DBA support, performance tuning, upgrades and migrations. Independent Oracle consulting by Valja Vassileva.",
-      },
-      { property: "og:title", content: "Services — Oracle DBA & APEX Consulting" },
-      {
-        property: "og:description",
-        content:
-          "APEX application development, Oracle DBA retainer, tuning and migrations. See how I can help.",
-      },
-    ],
-  }),
+  head: () => ({ meta: [
+    { title: "Services — OraVertex" },
+    { name: "description", content: "Oracle APEX development, database engineering, performance tuning, architecture and migrations by OraVertex." },
+    { property: "og:title", content: "Services — OraVertex" },
+    { property: "og:description", content: "Precision Oracle engineering for demanding systems." },
+  ]}),
   component: Services,
 });
 
 const services = [
-  {
-    tag: "01",
-    title: "Oracle APEX development",
-    lede: "New APEX applications, redesigns of legacy ones and integrations with the rest of your stack.",
-    bullets: [
-      "New APEX apps from data model to launch",
-      "Rescue of legacy APEX 4/5 apps",
-      "SSO, OIDC, SAML, custom auth schemes",
-      "REST integrations & ORDS",
-      "APEX upgrades to 24.x",
-    ],
-  },
-  {
-    tag: "02",
-    title: "Oracle DBA — retainer or one-off",
-    lede: "Ongoing support or a fixed engagement to bring a database back to health.",
-    bullets: [
-      "Performance tuning (SQL, PGA, AWR-driven)",
-      "Backup & recovery strategy (RMAN)",
-      "RAC & Data Guard setup and audits",
-      "Patching and 19c / 23ai upgrades",
-      "24/7 emergency response option",
-    ],
-  },
-  {
-    tag: "03",
-    title: "Architecture & code review",
-    lede: "A structured second opinion before you commit to a direction — or after something has already gone wrong.",
-    bullets: [
-      "Data model & PL/SQL review",
-      "APEX app security assessment",
-      "Capacity & scaling review",
-      "Written report with priorities",
-    ],
-  },
-  {
-    tag: "04",
-    title: "Migrations",
-    lede: "From on-prem to OCI, from legacy versions to 23ai or consolidating a fleet of instances.",
-    bullets: [
-      "19c / 23ai upgrades",
-      "On-prem → OCI moves",
-      "Cross-platform migrations",
-      "Rollback plans that actually work",
-    ],
-  },
+  { tag:"01", title:"Oracle APEX", lede:"Data-driven applications designed with the database as a first-class part of the product.", bullets:["New APEX applications from data model to launch","Legacy APEX rescue and modernization","SSO, OIDC, SAML and custom authentication","REST integrations and ORDS","APEX upgrades"] },
+  { tag:"02", title:"Database engineering", lede:"Deep Oracle DBA work for environments where reliability and performance are not negotiable.", bullets:["SQL and AWR-driven performance tuning","RMAN backup and recovery strategy","RAC and Data Guard","Patching and 19c / 23ai upgrades","Retainer and incident support"] },
+  { tag:"03", title:"Architecture review", lede:"A rigorous second opinion before a major decision — or when a system has stopped behaving as expected.", bullets:["Data model and PL/SQL review","APEX security assessment","Capacity and scaling review","Application/database boundary review","Written priorities and recommendations"] },
+  { tag:"04", title:"Migrations", lede:"Carefully planned moves from legacy platforms to modern Oracle estates and OCI.", bullets:["19c / 23ai upgrades","On-premise to OCI","Cross-platform migrations","Consolidation and modernization","Rollback plans and rehearsal"] },
 ];
 
-function Services() {
-  return (
-    <SiteLayout>
-      <section className="container-page py-20 md:py-28">
-        <span className="chip">Services</span>
-        <h1 className="mt-6 text-5xl md:text-6xl max-w-3xl">
-          Deep Oracle expertise, on demand.
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-ink-muted">
-          I work with a small number of clients at a time so every engagement
-          gets my full attention. Below is what I typically do — most projects
-          are some blend of these.
-        </p>
-
-        <div className="mt-16 grid md:grid-cols-2 gap-6">
-          {services.map((s) => (
-            <article
-              key={s.title}
-              className="rounded-2xl border border-border bg-card p-8 hover:border-accent/60 transition-colors"
-            >
-              <div className="font-mono text-xs text-accent tracking-widest">
-                {s.tag} — Service
-              </div>
-              <h2 className="mt-3 text-3xl">{s.title}</h2>
-              <p className="mt-3 text-ink-muted">{s.lede}</p>
-              <ul className="mt-6 space-y-2 text-sm">
-                {s.bullets.map((b) => (
-                  <li key={b} className="flex gap-3">
-                    <span className="mt-2 h-1 w-3 bg-accent flex-none rounded-full" aria-hidden />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-20 rounded-3xl border border-border p-10 bg-surface flex flex-col md:flex-row md:items-center gap-6 justify-between">
-          <div>
-            <h2 className="text-3xl">Not sure what you need?</h2>
-            <p className="mt-2 text-ink-muted max-w-xl">
-              Send a quick description of the problem. If I'm not the right
-              person, I'll say so — and often point you to someone who is.
-            </p>
-          </div>
-          <Link to="/contact" className="btn-primary">Start a conversation →</Link>
-        </div>
-      </section>
-    </SiteLayout>
-  );
-}
+function Services(){return <SiteLayout><section className="container-page py-24 md:py-32"><span className="chip">The disciplines</span><h1 className="mt-7 text-6xl md:text-8xl max-w-5xl leading-[.82]">Engineering for<br /><em>systems that matter.</em></h1><p className="mt-9 max-w-2xl text-lg text-ink-muted leading-relaxed">OraVertex works at the intersection of Oracle databases, applications and architecture. Engagements are deliberately focused: understand the system, define the real problem, then engineer the smallest elegant solution.</p><div className="mt-20 border-t border-border">{services.map(s=><article key={s.tag} className="grid md:grid-cols-[5rem_1fr_1.2fr] gap-7 md:gap-12 py-10 border-b border-border"><span className="font-mono text-[10px] text-accent">{s.tag}</span><div><h2 className="text-4xl md:text-5xl">{s.title}</h2><p className="mt-3 text-sm text-ink-muted leading-relaxed">{s.lede}</p></div><ul className="space-y-2 text-sm text-ink-muted">{s.bullets.map(b=><li key={b} className="before:content-['—'] before:mr-3 before:text-accent">{b}</li>)}</ul></article>)}</div><div className="mt-20 pt-10 border-t border-border flex flex-col md:flex-row md:items-end justify-between gap-8"><div><span className="chip">Private enquiries</span><h2 className="mt-4 text-4xl">Have a difficult system?</h2></div><Link to="/contact" className="btn-primary">Start a conversation <span>→</span></Link></div></section></SiteLayout>}
