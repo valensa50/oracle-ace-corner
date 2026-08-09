@@ -192,7 +192,7 @@ function Home() {
         <div className="rounded-3xl bg-primary text-primary-foreground p-8 md:p-16 relative overflow-hidden">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/40 blur-3xl" aria-hidden />
           <div
-            className="absolute -left-16 bottom--16 h-56 w-56 rounded-full bg-accent-glow/20 blur-3xl"
+            className="absolute -left-16 -bottom-16 h-56 w-56 rounded-full bg-accent-glow/20 blur-3xl"
             aria-hidden
           />
           <div className="relative">
